@@ -26,38 +26,6 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
    $ npm run db:init
    ```
 
-Note: If you are using Windows and previus command display errors you could try extra this steps
-
-1. run docker container
-   ```
-   $ docker run -p 3000:3000 -v [full/path/to/folder]/onsite-challenge-1f:/seso -it etiv/nvm-base
-   ```
-2. install nvm script (this install should give the instructions to load nvm without close terminal)
-
-   ```
-   $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-   ```
-
-3. load nvm
-
-```
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-```
-
-4. Install Node
-
-```
-$ nvm install [node version]
-```
-
-5. replace localhost config with docker internal ip `host.docker.internal`
-6. install database or migrations
-
-```
-    $ npm run db:init  // or
-    $ db:migration:run
-```
 ### Running the app
 
 1. Start the application:
