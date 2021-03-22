@@ -1,0 +1,14 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "ignore": ["node_modules", ".next"],
+  "watch": ["pages/api/**/*", "server.ts", "services/**/*", "repositories/**/*"],
+  "ext": "ts tsx js json",
+  "execMap": {
+    "ts": "ts-node -r tsconfig-paths/register server.ts"
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "NODE_CONFIG_DIR": "./config"
+  }
+}

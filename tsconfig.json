@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "typeRoots": [],
+    "types": ["node", "@types/jest"],
+    "baseUrl": ".",
+    "paths": {
+      "@/server": ["./server"],
+      "@/pages/*": ["./pages/*"],
+      "@/pages": ["./pages"],
+      "@/lib/*": ["./lib/*"],
+      "@/lib": ["./lib"],
+      "@/components/*": ["./components/*"],
+      "@/components": ["./components"],
+      "@/client-state/*": ["./client-state/*"],
+      "@/clienttate/*": ["./client-state"],
+      "@/services/*": ["./services/*"],
+      "@/services": ["./services"],
+      "@/repositories/*": ["./repositories/*"],
+      "@/repositories": ["./repositories"],
+      "@/__test-utils__/*": ["./__test-utils__/*"],
+      "@/__test-utils__": ["./__test-utils__"],
+      "@/workers/*": ["./workers/*"],
+      "@/workers": ["./workers"]
+    },
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["dom", "dom.iterable", "esnext", "es5", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js"
+  ],
+  "exclude": ["node_modules", "*jest*"]
+}

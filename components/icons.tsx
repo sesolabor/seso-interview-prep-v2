@@ -1,0 +1,30 @@
+// Ant icons are huge (size), this sidesteps importing unused svgs.
+// See: https://stackoverflow.com/questions/48721290/ant-design-huge-imports
+export { default as CheckCircleFilled } from "@ant-design/icons/CheckCircleFilled";
+export { default as CheckCircleOutlined } from "@ant-design/icons/CheckCircleOutlined";
+export { default as LeftOutlined } from "@ant-design/icons/LeftOutlined";
+export { default as FileOutlined } from "@ant-design/icons/FileOutlined";
+export { default as InfoCircleOutlined } from "@ant-design/icons/InfoCircleOutlined";
+export { default as DownOutlined } from "@ant-design/icons/DownOutlined";
+export { default as PaperClipOutlined } from "@ant-design/icons/PaperClipOutlined";
+export { default as ExclamationCircleOutlined } from "@ant-design/icons/ExclamationCircleOutlined";
+export { default as BellOutlined } from "@ant-design/icons/BellOutlined";
+export { default as QuestionCircleOutlined } from "@ant-design/icons/QuestionCircleOutlined";
+export { default as FileProtectOutlined } from "@ant-design/icons/FileProtectOutlined";
+export { default as ProjectOutlined } from "@ant-design/icons/ProjectOutlined";
+export { default as TeamOutlined } from "@ant-design/icons/TeamOutlined";
+export { default as DoubleLeftOutlined } from "@ant-design/icons/DoubleLeftOutlined";
+export { default as DoubleRightOutlined } from "@ant-design/icons/DoubleRightOutlined";
+export { default as EditOutlined } from "@ant-design/icons/EditOutlined";
+export { default as LeftCircleOutlined } from "@ant-design/icons/LeftCircleOutlined";
+export { default as UserOutlined } from "@ant-design/icons/UserOutlined";
+export { default as CalendarOutlined } from "@ant-design/icons/CalendarOutlined";
+export { default as HomeTwoTone } from "@ant-design/icons/HomeOutlined";
+export { default as HomeOutlined } from "@ant-design/icons/HomeOutlined";
+export { default as DollarOutlined } from "@ant-design/icons/DollarOutlined";
+export { default as ToolOutlined } from "@ant-design/icons/ToolOutlined";
+export { default as ClockCircleOutlined } from "@ant-design/icons/ClockCircleOutlined";
+export { default as UnorderedListOutlined } from "@ant-design/icons/UnorderedListOutlined";
+export { default as FileTwoTone } from "@ant-design/icons/FileTwoTone";
+export { default as DeleteOutlined } from "@ant-design/icons/DeleteOutlined";
+export { default as CloseCircleOutlined } from "@ant-design/icons/CloseCircleOutlined";

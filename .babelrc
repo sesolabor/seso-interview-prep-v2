@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "class-properties": {
+          "loose": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    // See: https://github.com/vercel/next.js/issues/9830#issuecomment-618163984
+    // See: https://github.com/mattcarlotta/next-antd-v4
+    [
+       "import",
+       {
+         "libraryName": "antd",
+         "style": true
+       }
+     ]
+  ]
+}
