@@ -40,7 +40,7 @@ function PreventFlashOfUnstyledContent() {
   return mounted ? null : (
     <Head>
       {/* Todo: Get this key into an env var. */}
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr72hMS2fFyeG-LUj6RqTjQBzKhpFzKHc&libraries=places"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAON7vpMvrepX2EQYCGhjRsEQ_X5wXdfSE&libraries=places"></script>
       <style
         id="preventFlashOfUnstyledContent"
         dangerouslySetInnerHTML={{
