@@ -5,7 +5,6 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
 - [Installation](#installation)
 - [Running the app](#running-the-app)
 - [Migrations](#migrations)
-- [Appendix](#appendix)
 
 ### Installation
 
