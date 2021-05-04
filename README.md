@@ -10,7 +10,7 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
 
 1. Clone the repository:
    ```
-   $ git clone git@github.com:sesolabor/onsite-challenge-1b.git
+   $ git clone git@github.com:sesolabor/seso-interview-prep-repo.git
    ```
 1. Install dependencies:
    ```
