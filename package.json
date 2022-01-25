@@ -12,7 +12,7 @@
     "postinstall": "npx next telemetry disable",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts",
     "worker": "ts-node -r tsconfig-paths/register workers",
-    "db:reset:hard": "docker rm $(docker ps -aq) && docker volume rm seso-app_postgres-data && docker-compose up",
+    "db:reset:hard": "docker rm $(docker ps -aq) && docker volume rm seso-interview-prep-repo_postgres-data && docker-compose up",
     "db:migration:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts migration:generate",
     "db:init": "npm run db:init:dev && npm run db:migration:run",
     "db:init:dev": "docker exec seso-postgres psql -U postgres -c \"CREATE DATABASE seso\"",
