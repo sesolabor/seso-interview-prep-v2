@@ -24,6 +24,19 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
    ```
    $ npm run db:init
    ```
+   Note: if you see 'error : database "seso" does not exist', it may be due
+   to an existing Postgres process running on port 5432. To fix this, stop your
+   running containers and then see if any processes are listed when
+   you run:
+   ```
+   $ sudo lsof -i :5432
+   ```
+   If so, remove them (`brew services stop postgresql` or `kill -9 <PID>`) and
+   then run the migration again
+   ```
+   $ db:migration:run
+   ```
+
 
 ### Running the app
 
