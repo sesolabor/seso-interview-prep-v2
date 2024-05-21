@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import { ProjectOutlined } from "@/components/icons";
 
-import "./style.module.less";
-
 const SideNav = () => {
   const [collapsed, toggleCollapsed] = useState(false);
   const invert = useCallback(() => toggleCollapsed(!collapsed), []);

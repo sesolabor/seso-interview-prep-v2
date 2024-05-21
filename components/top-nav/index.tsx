@@ -4,8 +4,6 @@ import { DownOutlined } from "@/components/icons";
 import { useTypedActionCreators, useTypedSelector } from "@/client-state/store";
 import * as ducks from "@/client-state/ducks";
 
-import "./style.module.less";
-
 const TopNav = () => {
   const actionCreators = useTypedActionCreators();
   const user = useTypedSelector(ducks.userAccount.selectors.user);

@@ -8,7 +8,6 @@ import { sesoLogoGreen100x100 } from "@/components/assets";
 import * as ducks from "@/client-state/ducks";
 import { actionCreators } from "@/client-state/store";
 import SignupForm from "./signup-form";
-import "./auth.module.less";
 
 const Orange = ({ children }) => <span style={{ color: volcano6 }}>{children}</span>;
 const LoginForm = () => {

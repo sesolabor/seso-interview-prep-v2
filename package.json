@@ -3,30 +3,37 @@
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
-    "node": "14.12.0",
-    "npm": "6.14.8"
+    "node": "16.8.0",
+    "npm": "7.21.0"
   },
   "@comment testURL": "See: https://github.com/jsdom/jsdom/issues/2304",
   "scripts": {
-    "dev": "nodemon --config  nodemon.json server.ts false 3000",
+    "dev": "nodemon --config nodemon.json server.ts false 3000",
     "postinstall": "npx next telemetry disable",
+    "typecheck": "tsc",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts",
     "worker": "ts-node -r tsconfig-paths/register workers",
-    "db:reset:hard": "docker rm $(docker ps -aq) && docker volume rm seso-interview-prep-repo_postgres-data && docker-compose up",
-    "db:migration:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts migration:generate",
     "db:init": "npm run db:init:dev && npm run db:migration:run",
-    "db:init:dev": "docker exec seso-postgres psql -U postgres -c \"CREATE DATABASE seso\"",
+    "db:init:dev": "docker exec seso-onsite-postgres psql -U postgres -c \"CREATE DATABASE seso_onsite\"",
     "db:migration:run": "node --max-old-space-size=2048 -- node_modules/.bin/ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts migration:run"
+  },
+  "overrides": {
+    "@react-awesome-query-builder/antd": {
+      "rc-picker": "^4.3.0"
+    }
   },
   "dependencies": {
     "@ant-design/colors": "^5.0.1",
     "@ant-design/icons": "^4.3.0",
+    "@aws-sdk/client-s3": "^3.577.0",
+    "@aws-sdk/s3-request-presigner": "^3.577.0",
     "@babel/plugin-proposal-decorators": "^7.12.1",
     "@hapi/boom": "^9.1.1",
     "@next/bundle-analyzer": "^10.0.3",
     "@pdf-lib/fontkit": "^1.1.1",
+    "@reduxjs/toolkit": "^2.2.3",
     "@sendgrid/mail": "^7.4.1",
-    "@types/bcrypt": "^3.0.0",
+    "@types/bcrypt": "^5.0.2",
     "@types/bluebird": "^3.5.33",
     "@types/jest": "^26.0.16",
     "@types/js-cookie": "^2.2.6",
@@ -39,10 +46,8 @@
     "@zeit/next-less": "^1.0.1",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "ant-design": "^1.0.0",
-    "antd": "^4.11.2",
-    "aws-sdk": "^2.795.0",
-    "babel-plugin-import": "^1.13.3",
-    "bcrypt": "^5.0.0",
+    "antd": "^5.11.4",
+    "bcrypt": "^5.1.1",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "boom": "^7.3.0",
@@ -89,7 +94,7 @@
     "prompts": "^2.4.0",
     "query-string": "^6.13.6",
     "ramda": "^0.27.1",
-    "rc-picker": "^2.4.3",
+    "rc-picker": "^4.4.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-fade-in": "^2.0.1",
@@ -104,7 +109,6 @@
     "reflect-metadata": "^0.1.13",
     "request-ip": "^2.1.3",
     "reselect": "^4.0.0",
-    "sass": "^1.30.0",
     "supports-color": "^8.1.1",
     "test-listen": "^1.1.0",
     "ts-node": "^9.0.0",
@@ -113,22 +117,19 @@
     "typeorm": "0.2.22",
     "typeorm-naming-strategies": "^2.0.0",
     "typesafe-actions": "^5.1.0",
-    "typescript": "^4.1.2",
+    "typescript": "^5.4.5",
     "uuid": "^8.3.1",
     "validator": "^13.5.1",
     "winston": "^3.3.3",
     "yargs": "^16.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@types/react": "^16.9.55",
-    "antd-scss-theme-plugin": "^1.0.8",
-    "yeoman-generator": "^4.13.0",
-    "supertest": "^6.0.1",
-    "babel-jest": "^26.6.3",
-    "ts-jest": "^26.4.4",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "supertest": "^6.0.1",
+    "ts-jest": "^26.4.4",
+    "yeoman-generator": "^4.13.0"
   }
 }

@@ -2,31 +2,19 @@ import type { AppProps } from "next/app";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { wrapper } from "@/client-state/store";
-import "@/components/global.module.less";
+import { ConfigProvider } from "antd";
+import "@/components/global.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <PreventFlashOfUnstyledContent />
       <div id="root" suppressHydrationWarning>
-        {typeof window === "undefined" ? null : <Component {...pageProps} />}
-        <style jsx global>{`
-          @font-face {
-            font-family: "Open Sans";
-            font-display: swap;
-          }
-          body {
-            font-family: "Open Sans", sans-serif;
-          }
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6 {
-            font-family: "Montserrat", sans-serif;
-          }
-        `}</style>
+        {typeof window === "undefined" ? null : (
+          <ConfigProvider theme={{ token: { colorPrimary: "#fa541c", fontFamily: "Open Sans" } }}>
+            <Component {...pageProps} />
+          </ConfigProvider>
+        )}
       </div>
     </>
   );

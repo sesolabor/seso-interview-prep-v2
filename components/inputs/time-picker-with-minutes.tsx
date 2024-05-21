@@ -1,8 +1,9 @@
 import dayjs, { Dayjs } from "dayjs";
-import { PickerTimeProps } from "antd/lib/date-picker/generatePicker";
 import TimePicker from "./time-picker-input";
 
-interface TimePickerWithMinutesProps extends Omit<PickerTimeProps<Dayjs>, "picker" | "onChange" | "value"> {
+import type { GenericTimePickerProps } from "antd/es/date-picker/generatePicker/interface";
+
+interface TimePickerWithMinutesProps extends Omit<GenericTimePickerProps<Dayjs>, "picker" | "onChange" | "value"> {
   onChange?: (value: number) => void;
   value?: number;
 }

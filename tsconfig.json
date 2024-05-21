@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "typeRoots": [],
-    "types": ["node", "@types/jest"],
+    "types": [],
     "baseUrl": ".",
     "paths": {
       "@/server": ["./server"],

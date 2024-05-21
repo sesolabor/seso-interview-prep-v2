@@ -1,5 +1,3 @@
-import "./style.module.less";
-import "antd/lib/date-picker/style/index";
 import { useContext } from "react";
 import type { InputProps, InputNumberProps, ButtonProps, CheckboxProps } from "antd";
 import { InputNumber as _InputNumber, Input as _Input, Button as _Button, Checkbox as _Checkbox } from "antd";
@@ -9,7 +7,7 @@ import _DatePicker, { DatePickerProps } from "./date-picker-input";
 import _TimePicker, { TimePickerProps } from "./time-picker-input";
 
 // https://dev.to/aexol/typescript-tutorial-infer-keyword-2cn
-const ReadOnlyContextHOC = <T extends unknown>(InputComponent) => {
+const ReadOnlyContextHOC = <T extends object>(InputComponent) => {
   return (props: T) => {
     const isReadonly = useContext(H2aContractFormReadonlyContext);
     return <InputComponent disabled={isReadonly} {...props} />;
