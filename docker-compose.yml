@@ -1,13 +1,13 @@
 version: "3.8"
 
 services:
-  seso-redis:
-    container_name: seso-redis
+  seso-redis-prep:
+    container_name: seso-redis-prep
     image: redis:6.0.9
     ports:
       - "6379:6379"
-  seso-postgres:
-    container_name: seso-postgres
+  seso-postgres-prep:
+    container_name: seso-postgres-prep
     image: postgres:13.1
     environment:
       - POSTGRES_DB=postgres

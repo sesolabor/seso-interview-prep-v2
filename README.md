@@ -34,8 +34,13 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
    If so, remove them (`brew services stop postgresql` or `kill -9 <PID>`) and
    then run the migration again
    ```
-   $ db:migration:run
+   $ npm run db:migration:run
    ```
+   If you want to start from scratch, please stop any running containers, and then run the following:
+   ```
+   $ npm run db:reset:hard
+   ```
+   Now you can return to the beginning of this step and start over.
 
 
 ### Running the app
@@ -45,6 +50,8 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
     $ npm run dev
     ```
 1. Navigate: http://localhost:3000
+
+  You should be able to see the 'login' page, but will not be able to actually create an account.
 
 ### Project Structure
 

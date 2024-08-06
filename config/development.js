@@ -6,7 +6,7 @@ module.exports = {
     secret: "otpSecret",
   },
   postgres: {
-    connectionString: "postgres://postgres:postgres@localhost:5432/seso",
+    connectionString: "postgres://postgres:postgres@localhost:5432/seso_prep",
     connectionName: "default",
     logging: true,
     logging: true,

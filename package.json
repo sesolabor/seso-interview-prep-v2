@@ -13,8 +13,10 @@
     "typecheck": "tsc",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts",
     "worker": "ts-node -r tsconfig-paths/register workers",
+    "db:reset:hard": "docker rm $(docker ps -aq) && docker volume rm seso-interview-prep-v2_postgres-data && docker-compose up",
+    "db:migration:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli ./node_modules/@types/node --config repositories/ormconfig.ts migration:generate",
     "db:init": "npm run db:init:dev && npm run db:migration:run",
-    "db:init:dev": "docker exec seso-onsite-postgres psql -U postgres -c \"CREATE DATABASE seso_onsite\"",
+    "db:init:dev": "docker exec seso-postgres-prep psql -U postgres -c \"CREATE DATABASE seso_prep\"",
     "db:migration:run": "node --max-old-space-size=2048 -- node_modules/.bin/ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli --config repositories/ormconfig.ts migration:run"
   },
   "overrides": {
@@ -37,7 +39,7 @@
     "@types/bluebird": "^3.5.33",
     "@types/jest": "^26.0.16",
     "@types/js-cookie": "^2.2.6",
-    "@types/node": "^14.14.6",
+    "@types/node": "^16.8.0",
     "@types/ramda": "^0.27.32",
     "@types/react-redux": "^7.1.11",
     "@types/test-listen": "^1.1.0",
