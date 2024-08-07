@@ -12,6 +12,14 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
    ```
    $ git clone git@github.com:sesolabor/seso-interview-prep-repo.git
    ```
+1. Ensure using project's Node version:
+   ```
+   $ nvm use
+   ```
+1. Confirm you are using the correct Node version:
+   ```bash
+   $ node -v # You should see `v16.8.0`
+   ```
 1. Install dependencies:
    ```
    $ npm install
