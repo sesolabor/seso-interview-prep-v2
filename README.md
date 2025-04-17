@@ -10,7 +10,7 @@ The Seso-app repo supports Seso Labor's web server, client application, and othe
 
 1. Clone the repository:
    ```
-   $ git clone git@github.com:sesolabor/seso-interview-prep-repo.git
+   $ git clone git@github.com:sesolabor/seso-interview-prep-v2.git
    ```
 1. Ensure using project's Node version:
    ```
